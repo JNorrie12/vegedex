@@ -1,0 +1,11 @@
+# scratch: previews, artifact fragment, test renders
+build/
+__pycache__/
+*.pyc
+*.reshuffle-tmp
+*.tmp
+.venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,7 @@
+{
+  "_readme": "Where the Obsidian vault's Vegedex folder is. The first path that exists is used; the VEGEDEX_VAULT environment variable overrides this. Windows path first, then the path the Claude computer shell sees.",
+  "vault_paths": [
+    "C:\\Users\\norri\\OneDrive\\Documents\\my_vault\\Vegedex",
+    "$HOME/mnt/my_vault/Vegedex"
+  ]
+}

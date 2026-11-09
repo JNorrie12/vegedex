@@ -1,0 +1,862 @@
+{
+  "_readme": "Veggie Dex card data. One entry per vegetable. status = 'grown' or 'wishlist'. Months are 1-12. Unknown values must be the string 'Unknown'. latin/family carry a [n] citation like other facts. photo_focus = [x, y] crop centre as 0-1 fractions; photo_zoom >= 1 zooms in. Card order/ids come from reshuffle.py (family, then species, grown before wishlist); new cards get max id + 1 until the next reshuffle.",
+  "cards": [
+    {
+      "id": 1,
+      "name": "Beetroot",
+      "latin": "Beta vulgaris [3]",
+      "family": "Amaranthaceae [3]",
+      "variant": "Unknown",
+      "category": "Root",
+      "status": "grown",
+      "harvested": "Oct 2026",
+      "photo": "photos/beetroot.jpg",
+      "photo_focus": [
+        0.48,
+        0.5
+      ],
+      "photo_zoom": 1.15,
+      "sow_months": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "harvest_months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "planting_window": "Feb-Jul. Outdoors from late Mar/Apr once soil is 7°C+; Feb sowings need a bolt-resistant variety under fleece or cloches [1]",
+      "harvest_window": "Jun-Oct, at golf-ball to cricket-ball size; bigger roots can turn woody [1]",
+      "special_instructions": [
+        "Soak seed in warm water for an hour before sowing [1]",
+        "Water every 10-14 days in dry spells; uneven watering splits roots, as seen on one of these [1]",
+        "Twist off leaves, keeping 4-5 on; store roots in dry sand or compost in a cool shed [1]"
+      ],
+      "recipes": [
+        "Beetroot bucatini [2]",
+        "Halloumi & beetroot open sandwich [2]",
+        "Vegan beetroot & quinoa burgers [2]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/beetroot/grow-your-own",
+        "https://bbcgoodfoodme.com/search-results/?q=Beetroot",
+        "https://www.rhs.org.uk/plants/173285/beta-vulgaris-early-wonder/details"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Spring Onion",
+      "latin": "Allium cepa [4]",
+      "family": "Amaryllidaceae [4]",
+      "variant": "Unknown (red-bulbed type)",
+      "category": "Allium",
+      "status": "grown",
+      "harvested": "Jun 2026",
+      "photo": "photos/spring-onion.jpg",
+      "photo_focus": [
+        0.6,
+        0.6
+      ],
+      "photo_zoom": 1.1,
+      "sow_months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "harvest_months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "planting_window": "Sow from Mar, little and often every couple of weeks; hardy types late summer/early autumn for spring picking [1]",
+      "harvest_window": "Spring to autumn, about two months after sowing; overwintered hardy types from Mar [1]",
+      "special_instructions": [
+        "Thin to about 2.5cm apart: crowding encourages downy mildew [1]",
+        "Water until established, then only in long dry spells (pots more often) [1]",
+        "Guard seedlings from slugs; watch for onion fly. Cloche hardy sowings in harsh winters [1]"
+      ],
+      "recipes": [
+        "Braised spring onions [2]",
+        "Roast tomato & spring onion risotto [3]",
+        "Seared mackerel with chilli, cucumber & spring onion [3]"
+      ],
+      "sources": [
+        "https://rhs.org.uk/vegetables/salad-onions/grow-your-own",
+        "https://bbcgoodfoodme.com/recipes/braised-spring-onions",
+        "https://www.greatbritishchefs.com/collections/spring-onion-recipes",
+        "https://www.rhs.org.uk/plants/368000/allium-cepa-north-holland-blood-red/details"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Horseradish",
+      "latin": "Armoracia rusticana [4]",
+      "family": "Brassicaceae [4]",
+      "variant": "Unknown",
+      "category": "Root",
+      "status": "grown",
+      "harvested": "Jul 2026",
+      "photo": "photos/horseradish.jpg",
+      "photo_focus": [
+        0.55,
+        0.42
+      ],
+      "photo_zoom": 1.0,
+      "sow_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "harvest_months": [
+        10,
+        11,
+        12
+      ],
+      "planting_window": "Plant roots (thongs) or young plants in spring or early summer, upright with the top 5cm below the soil [1]",
+      "harvest_window": "Best in autumn or early winter after a frost; spring/summer lifting is possible with extra water. Young plants lightly from their 2nd autumn [1]",
+      "special_instructions": [
+        "Spreads by roots and regrows from any piece left behind; a 30cm+ pot keeps it contained [1]",
+        "Lift up to half the roots each year and replant the rest [1]",
+        "Store whole roots in damp sand somewhere cool and dark; grate just before use [1]"
+      ],
+      "recipes": [
+        "Horseradish mash [2]",
+        "Salmon & horseradish gravadlax [3]",
+        "Oxtail lasagne with horseradish cream [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/horseradish/grow-your-own",
+        "https://www.bbcgoodfoodme.com/recipes/horseradish-mash/",
+        "https://www.greatbritishchefs.com/ingredients/horseradish-recipes",
+        "https://www.rhs.org.uk/Plants/1601/Armoracia-rusticana/Details"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Turnip",
+      "latin": "Brassica rapa (Rapifera Group) [4]",
+      "family": "Brassicaceae [4]",
+      "variant": "Unknown (purple-top type)",
+      "category": "Root",
+      "status": "grown",
+      "harvested": "Oct 2026",
+      "photo": "photos/turnip.jpg",
+      "photo_focus": [
+        0.5,
+        0.45
+      ],
+      "photo_zoom": 1.0,
+      "sow_months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "harvest_months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "planting_window": "Mar-mid Aug, little and often. Early types Mar-Jun (Feb under cloches); maincrop Jul-mid Aug [1]",
+      "harvest_window": "Early types May-Sep; maincrop from Oct onward. Leaves can be picked from spring [1]",
+      "special_instructions": [
+        "Pick at golf-ball size for raw, tennis-ball for cooking; larger goes woody and bitter [1]",
+        "Water in dry spells or roots stay small, split or bolt [1]",
+        "Net against birds; watch for flea beetle and club root [1]"
+      ],
+      "recipes": [
+        "Turnip & butternut smash [2]",
+        "Scotch broth [2]",
+        "Pickled turnips [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/turnips/grow-your-own",
+        "https://www.bbcgoodfoodme.com/search-results/page/2/?q=turnip",
+        "https://www.inkl.com/news/one-batch-of-pickled-turnips-four-recipe-ideas",
+        "https://www.rhs.org.uk/plants/157219/brassica-rapa-rapifera-group/details"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Radish",
+      "latin": "Raphanus sativus [4]",
+      "family": "Brassicaceae [4]",
+      "variant": "Unknown (round red salad type)",
+      "category": "Root",
+      "status": "grown",
+      "harvested": "Oct 2026",
+      "photo": "photos/radish.jpg",
+      "photo_focus": [
+        0.47,
+        0.46
+      ],
+      "photo_zoom": 1.7,
+      "sow_months": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "harvest_months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "planting_window": "Salad types Feb-Aug (Feb under cloches), small batches every few weeks [1]",
+      "harvest_window": "Late spring through summer, about 4-6 weeks after germination [1]",
+      "special_instructions": [
+        "Keep evenly moist; uneven watering splits roots (split ones are still edible) [1]",
+        "Pull at about 2.5cm across before they turn woody or hot [1]",
+        "Flea beetle holes in leaves are usually just cosmetic [1]"
+      ],
+      "recipes": [
+        "Chilli-butter smashed radishes [2]",
+        "Brown butter basted radishes [2]",
+        "Smacked radishes with sesame, sumac & mint [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/radishes/grow-your-own",
+        "https://www.pressreader.com/australia/bbc-good-food/20210228/282922388132163",
+        "https://www.greatbritishchefs.com/recipes/smacked-radishes-sesame-sumac-mint-recipe",
+        "https://www.rhs.org.uk/plants/105558/raphanus-sativus/details"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Cucumber",
+      "latin": "Cucumis sativus [3]",
+      "family": "Cucurbitaceae [3]",
+      "variant": "Unknown",
+      "category": "Fruiting",
+      "status": "grown",
+      "harvested": "Sep 2026",
+      "photo": "photos/cucumber.jpg",
+      "photo_focus": [
+        0.5,
+        0.42
+      ],
+      "photo_zoom": 1.0,
+      "sow_months": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "harvest_months": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "planting_window": "Sow indoors mid Feb-Apr (late Apr for outdoor crops), or direct late May/early Jun; plant out from early Jun once reliably above 12°C [1]",
+      "harvest_window": "Mid-summer to mid-autumn; pick small types at 15cm, full-sized at 20-25cm [1]",
+      "special_instructions": [
+        "Water at the base in the morning, more as fruits form; keep leaves dry [1]",
+        "Train up supports; outdoors pinch out the tip after seven leaves [1]",
+        "Remove male flowers on all-female greenhouse types (bitter fruit); keep them on outdoor types [1]"
+      ],
+      "recipes": [
+        "Cucumber raita [2]",
+        "Mackerel pâté with pickled cucumber [2]"
+      ],
+      "sources": [
+        "https://rhs.org.uk/vegetables/cucumbers/grow-your-own",
+        "https://greatbritishchefs.com/collections/cucumber-recipes",
+        "https://www.rhs.org.uk/plants/291516/cucumis-sativus-torrente/details"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Giant Pumpkin",
+      "latin": "Cucurbita maxima [1]",
+      "family": "Cucurbitaceae [1]",
+      "variant": "Unknown",
+      "category": "Fruiting",
+      "status": "wishlist",
+      "added": "Oct 2026",
+      "sow_months": [
+        4,
+        5,
+        6
+      ],
+      "harvest_months": [
+        9,
+        10
+      ],
+      "planting_window": "Sow indoors mid-late Apr at 18-21°C, or outdoors late May/early Jun after frost; trailing types 1.5m apart [2]",
+      "harvest_window": "Autumn, leaving fruit on the plant as long as possible but in before the first frost; cut with 10cm+ of stem [2]",
+      "special_instructions": [
+        "For a giant, let just one fruit develop per plant and remove any others [2]",
+        "Water generously; high-potash feed every 10-14 days once the fruit swells; rest it on a tile off damp soil [2]",
+        "Pin runners down at the leaf joints so they root and take up more water [3]"
+      ],
+      "recipes": [
+        "Zingy pumpkin curry [4]",
+        "Creamy pumpkin pasta [4]",
+        "Pumpkin & pecan cheesecake pie [4]"
+      ],
+      "sources": [
+        "https://rhs.org.uk/Plants/158218/wd/Details",
+        "https://www.rhs.org.uk/advice/grow-your-own/vegetables/pumpkin",
+        "https://www.rhs.org.uk/advice/grow-your-own/features/top-tips-for-perfect-pumpkins",
+        "https://bbcgoodfoodme.com/collections/pumpkin"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Courgette",
+      "latin": "Cucurbita pepo [3]",
+      "family": "Cucurbitaceae [3]",
+      "variant": "Unknown (yellow-fruited)",
+      "category": "Fruiting",
+      "status": "grown",
+      "harvested": "Oct 2026",
+      "photo": "photos/courgette.jpg",
+      "photo_focus": [
+        0.5,
+        0.4
+      ],
+      "photo_zoom": 1.05,
+      "sow_months": [
+        4,
+        5,
+        6
+      ],
+      "harvest_months": [
+        7,
+        8,
+        9
+      ],
+      "planting_window": "Indoors Apr-early May at 18-21°C; outdoors late May/early Jun. Plant out in early summer, 90cm apart [1]",
+      "harvest_window": "Through summer, picked at 10-12.5cm long [1]",
+      "special_instructions": [
+        "Keep soil moist; water the base, not the leaves, to limit powdery mildew [1]",
+        "In pots, high-potash feed every 10-14 days once fruits swell [1]",
+        "Frost-tender; cool spells can cause poor pollination and fruit rot [1]"
+      ],
+      "recipes": [
+        "Easy courgette fritters [2]",
+        "Courgette fries [2]",
+        "Courgette, cardamom & chocolate brownies [2]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/courgettes/grow-your-own",
+        "https://greatbritishchefs.com/features/creative-courgette-recipes-for-summer",
+        "https://www.rhs.org.uk/plants/106106/cucurbita-pepo/details"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Chilli Pepper",
+      "latin": "Capsicum annuum [3]",
+      "family": "Solanaceae [3]",
+      "variant": "Unknown (small red finger type)",
+      "category": "Fruiting",
+      "status": "grown",
+      "harvested": "Oct 2026",
+      "photo": "photos/chilli-pepper.jpg",
+      "photo_focus": [
+        0.49,
+        0.45
+      ],
+      "photo_zoom": 1.6,
+      "sow_months": [
+        2,
+        3,
+        4
+      ],
+      "harvest_months": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "planting_window": "Sow indoors Feb-Apr at about 21°C; plant out late May/early Jun once nights stay above 12°C, or grow on under cover [1]",
+      "harvest_window": "Mid-summer into autumn under glass; outdoor plants should start fruiting by Aug [1]",
+      "special_instructions": [
+        "Keep compost evenly moist: dry plants drop their flower buds [1]",
+        "Weekly high-potash feed once flowering; pick some green to keep more chillies coming [1]",
+        "To overwinter, cut back and keep somewhere warm and bright, watering sparingly [1]"
+      ],
+      "recipes": [
+        "Chilli salsa [2]",
+        "Arrabbiata sauce [2]"
+      ],
+      "sources": [
+        "https://rhs.org.uk/vegetables/chilli-pepper/grow-your-own",
+        "https://www.deliciousmagazine.co.uk/what-to-do-with-leftover-red-chillies/",
+        "https://www.rhs.org.uk/plants/522811/capsicum-annuum-pencil/details"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Cherry Tomato",
+      "latin": "Solanum lycopersicum [4]",
+      "family": "Solanaceae [4]",
+      "variant": "Unknown",
+      "category": "Fruiting",
+      "status": "grown",
+      "harvested": "Oct 2026",
+      "photo": "photos/tomato.jpg",
+      "photo_focus": [
+        0.5,
+        0.43
+      ],
+      "photo_zoom": 1.35,
+      "sow_months": [
+        2,
+        3,
+        4
+      ],
+      "harvest_months": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "planting_window": "Sow late Feb-mid Mar for greenhouse, late Mar-early Apr for outdoors (18°C); plant out once reliably above 16°C [1]",
+      "harvest_window": "From mid-summer into autumn; pick fully coloured with the stalk on [1]",
+      "special_instructions": [
+        "Cordons: pinch out side-shoots and stop after ~4 trusses outdoors; bush types keep theirs [1]",
+        "Water evenly to avoid splitting and blossom end rot; high-potash feed every 10-14 days [1]",
+        "Outdoor plants are blight-prone; don't grow in the same bed two years running [1]"
+      ],
+      "recipes": [
+        "Roasted cherry tomatoes [2]",
+        "Slow-cooked vine tomatoes with garlic [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/tomatoes/grow-your-own",
+        "https://greatbritishchefs.com/recipes/roasted-cherry-tomato-recipe",
+        "https://www.bbcgoodfoodme.com/recipes/slow-cooked-vine-tomatoes-with-garlic/",
+        "https://www.rhs.org.uk/plants/366082/solanum-lycopersicum-red-cherry/details"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Aubergine",
+      "latin": "Solanum melongena [3]",
+      "family": "Solanaceae [3]",
+      "variant": "Unknown",
+      "category": "Fruiting",
+      "status": "grown",
+      "harvested": "Oct 2026",
+      "photo": "photos/aubergine.jpg",
+      "photo_focus": [
+        0.53,
+        0.38
+      ],
+      "photo_zoom": 1.25,
+      "sow_months": [
+        2,
+        3
+      ],
+      "harvest_months": [
+        8,
+        9,
+        10
+      ],
+      "planting_window": "Sow indoors from Feb (Jan only if heated); plant out late May/early Jun after frost, or Apr-May under glass [1]",
+      "harvest_window": "From Aug, when full-sized, well coloured and glossy; protect outdoor plants by late Sep [1]",
+      "special_instructions": [
+        "Needs 21°C+ to germinate; keep seedlings at 16-18°C [1]",
+        "Pinch out the tip at about 30cm; stake the main stem [1]",
+        "High-potash feed fortnightly once flowering; dull skin = over-ripe and bitter [1]"
+      ],
+      "recipes": [
+        "Pasta alla norma [2]",
+        "Smoky aubergine & pepper tagine [2]",
+        "Aubergine, halloumi & harissa skillet bake [2]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/aubergines/grow-your-own",
+        "https://bbcgoodfoodme.com/how-to/aubergine-recipes",
+        "https://www.rhs.org.uk/plants/105486/solanum-melongena/details"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Pea",
+      "latin": "Pisum sativum [2]",
+      "family": "Fabaceae [2]",
+      "variant": "Unknown",
+      "category": "Legume",
+      "status": "failed",
+      "sow_months": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "harvest_months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "planting_window": "Sow indoors Feb–Mar, or outdoors Mar–Jun once the soil reaches 10°C; plant out at about 20cm tall [1]",
+      "harvest_window": "Jun–Oct; pick regularly or plants stop flowering. Mangetout and sugarsnap at about 7.5cm long [1]",
+      "special_instructions": [
+        "Support tall types with netting or canes, short types with twiggy pea sticks [1]",
+        "Mice eat new sowings, so start indoors; net against pigeons [1]",
+        "Water well at flowering and again two weeks later to swell pods [1]"
+      ],
+      "recipes": [
+        "Amritsari cod with green pea chutney [3]",
+        "Wild sea bass with pea and mint soup [3]",
+        "Chilled watercress soup with garden peas [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/peas/grow-your-own",
+        "https://www.rhs.org.uk/plants/106216/pisum-sativum/details",
+        "https://www.greatbritishchefs.com/collections/pea-recipes"
+      ],
+      "failed": "Oct 2026"
+    },
+    {
+      "id": 13,
+      "name": "Carrot",
+      "latin": "Daucus carota subsp. sativus [2]",
+      "family": "Apiaceae [2]",
+      "variant": "Unknown",
+      "category": "Root",
+      "status": "failed",
+      "sow_months": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "harvest_months": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "planting_window": "Main sowings Apr–early Jul; early types Feb–Mar under cloches or fleece. Sow small batches every 3–4 weeks [1]",
+      "harvest_window": "About 12–16 weeks after sowing, through summer into autumn; maincrops can stay in the ground into winter [1]",
+      "special_instructions": [
+        "Cover with insect-proof mesh against carrot fly; sowing after mid-May avoids the first generation [1]",
+        "Thin to 5–7.5cm apart; stones and overcrowding cause forked roots [1]",
+        "Rarely needs watering, but uneven moisture splits roots; soak fortnightly in long dry spells [1]"
+      ],
+      "recipes": [
+        "Honey-roast carrots with orange and pistachios [3]",
+        "Glazed carrots with tarragon and garlic [3]",
+        "Carrot and brown butter purée [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/carrots/grow-your-own",
+        "https://www.rhs.org.uk/plants/158355/daucus-carota-subsp-sativus/details",
+        "https://www.greatbritishchefs.com/features/best-christmas-carrots-recipes"
+      ],
+      "failed": "Oct 2026"
+    },
+    {
+      "id": 14,
+      "name": "Butternut Squash",
+      "variant": "Unknown",
+      "latin": "Cucurbita moschata [2]",
+      "family": "Cucurbitaceae [2]",
+      "category": "Fruiting",
+      "status": "wishlist",
+      "added": "Oct 2026",
+      "sow_months": [
+        4,
+        5,
+        6
+      ],
+      "harvest_months": [
+        9,
+        10
+      ],
+      "planting_window": "Sow indoors mid–late Apr at 18–21°C, or outdoors late May–early Jun after the last frost [1]",
+      "harvest_window": "Autumn, before the first frost; cut with 10cm of stem, cure in the sun 7–10 days, store 3–6 months [1]",
+      "special_instructions": [
+        "Trailing types need about 1.5m between plants, bush types 90cm [1]",
+        "Keep well watered, especially when fruiting; dry roots invite powdery mildew [1]",
+        "Raise fruit off damp soil on a tile or brick so it ripens in full sun [1]"
+      ],
+      "recipes": [
+        "Spicy butternut squash soup [3]",
+        "Squash and truffle ravioli [3]",
+        "Roast duck with squash mousse [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/pumpkins/grow-your-own",
+        "https://www.rhs.org.uk/plants/139350/cucurbita-moschata/details",
+        "https://www.greatbritishchefs.com/collections/butternut-squash-recipes"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Red Kuri Squash",
+      "variant": "Red Kuri",
+      "latin": "Cucurbita maxima [2]",
+      "family": "Cucurbitaceae [2]",
+      "category": "Fruiting",
+      "status": "wishlist",
+      "added": "Oct 2026",
+      "sow_months": [
+        4,
+        5,
+        6
+      ],
+      "harvest_months": [
+        9,
+        10
+      ],
+      "planting_window": "Sow indoors mid–late Apr at 18–21°C, or outdoors late May–early Jun after the last frost [1]",
+      "harvest_window": "Autumn, before the first frost; cut with 10cm of stem, cure in the sun 7–10 days, store 3–6 months [1]",
+      "special_instructions": [
+        "Onion-type squash: 2–3 orange-red teardrop fruits per plant, 1.5–3kg each [2]",
+        "Trailing types need about 1.5m between plants; keep well watered when fruiting [1]",
+        "Cure in the sun 7–10 days, then store at 10–15°C with fruits not touching [1]"
+      ],
+      "recipes": [
+        "Spelt, barley and squash risotto [3]",
+        "Pumpkin cakes [4]",
+        "Pumpkin custard tart [4]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/pumpkins/grow-your-own",
+        "https://www.rhs.org.uk/plants/364573/cucurbita-maxima-red-kuri/details",
+        "https://greatbritishchefs.com/collections/squash-recipes",
+        "https://www.greatbritishchefs.com/campaigns/autumnal-pumpkin-recipe-guide"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Harlequin Squash",
+      "variant": "Harlequin",
+      "latin": "Cucurbita pepo [2]",
+      "family": "Cucurbitaceae [2]",
+      "category": "Fruiting",
+      "status": "wishlist",
+      "added": "Oct 2026",
+      "sow_months": [
+        4,
+        5,
+        6
+      ],
+      "harvest_months": [
+        9,
+        10
+      ],
+      "planting_window": "Sow indoors mid–late Apr at 18–21°C, or outdoors late May–early Jun after the last frost [1]",
+      "harvest_window": "Autumn, before the first frost; cut with 10cm of stem, cure in the sun 7–10 days, store 3–6 months [1]",
+      "special_instructions": [
+        "Compact, bushy and early-maturing; holds the RHS Award of Garden Merit [2]",
+        "Striped acorn-shaped fruits up to about 700g may need support to keep them off the ground [2]",
+        "Bush types need about 90cm between plants; keep well watered when fruiting [1]"
+      ],
+      "recipes": [
+        "Spelt, barley and squash risotto [3]",
+        "Pumpkin tarts with spinach and gorgonzola [4]",
+        "Pumpkin kapitan [4]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/pumpkins/grow-your-own",
+        "https://www.rhs.org.uk/plants/318439/cucurbita-pepo-harlequin/details",
+        "https://greatbritishchefs.com/collections/squash-recipes",
+        "https://www.greatbritishchefs.com/campaigns/autumnal-pumpkin-recipe-guide"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Onion",
+      "variant": "Unknown",
+      "latin": "Allium cepa (Cepa Group) [2]",
+      "family": "Amaryllidaceae [2]",
+      "category": "Allium",
+      "status": "wishlist",
+      "added": "Oct 2026",
+      "sow_months": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10
+      ],
+      "harvest_months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "planting_window": "Sets early–mid spring, or overwintering sets in autumn; seed mid-winter to mid-spring. Sets 10–15cm apart [1]",
+      "harvest_window": "Jul–Oct from spring sets and seed; Jun–Jul from autumn sets. Lift when the foliage yellows and topples [1]",
+      "special_instructions": [
+        "Net or fleece new sets against birds until they root [1]",
+        "Water in dry spells while roots form; stop once bulbs swell in mid-summer [1]",
+        "Dry for about 2 weeks until papery, then store somewhere cool, light and airy [1]"
+      ],
+      "recipes": [
+        "French onion soup [3]",
+        "Onion bhaji [3]",
+        "Pissaladière [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/onions/grow-your-own",
+        "https://www.rhs.org.uk/plants/112430/allium-cepa-cepa-group-centurion/details",
+        "https://www.greatbritishchefs.com/collections/onion-recipes"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Garlic",
+      "variant": "Unknown",
+      "latin": "Allium sativum [2]",
+      "family": "Amaryllidaceae [2]",
+      "category": "Allium",
+      "status": "wishlist",
+      "added": "Oct 2026",
+      "sow_months": [
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
+      "harvest_months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "planting_window": "Plant cloves mid-autumn to early winter (some types late winter–early spring), 15cm apart, tips 2.5cm deep [1]",
+      "harvest_window": "Autumn-planted: late spring to early summer; spring-planted: mid-summer to early autumn. Lift when leaves yellow [1]",
+      "special_instructions": [
+        "Most types need 1–2 months at 0–10°C to form good bulbs [1]",
+        "Water in spring dry spells; stop once bulbs are well formed to avoid rot [1]",
+        "Watch for leek rust and white rot; dry 2–4 weeks before storing [1]"
+      ],
+      "recipes": [
+        "Spaghetti aglio e olio [3]",
+        "Ajo blanco [3]",
+        "Grilled mussels with garlic and parsley [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/garlic/grow-your-own",
+        "https://www.rhs.org.uk/plants/858/allium-sativum/details",
+        "https://www.deliciousmagazine.co.uk/collections/garlic-recipes/"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Potato",
+      "latin": "Solanum tuberosum [2]",
+      "family": "Solanaceae [2]",
+      "variant": "Unknown",
+      "category": "Root",
+      "status": "growing",
+      "sow_months": [
+        3,
+        4,
+        5
+      ],
+      "harvest_months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "planting_window": "First earlies late Mar, second earlies early–mid Apr, maincrops mid-Apr to early May; 15cm deep [1]",
+      "harvest_window": "First earlies Jun–Jul, second earlies Jul–Aug, maincrops late Aug–Oct. Test a tuber before lifting [1]",
+      "special_instructions": [
+        "Chit earlies from late Jan for 4–6 weeks; maincrops gain little [1]",
+        "Earth up from 23cm tall, leaving 10cm showing, to guard against frost and green tubers [1]",
+        "Water in dry weather; watch for blight, slugs and scab, and rotate each year [1]"
+      ],
+      "recipes": [
+        "Roast potatoes [3]",
+        "Potato soup with black truffle [3]",
+        "Roast Jersey Royals with glazed pear and Roquefort [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/potatoes/grow-your-own",
+        "https://www.rhs.org.uk/plants/318603/solanum-tuberosum-tay/details",
+        "https://greatbritishchefs.com/collections/potato-recipes"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Parsnip",
+      "latin": "Pastinaca sativa subsp. sativa [2]",
+      "family": "Apiaceae [2]",
+      "variant": "Unknown",
+      "category": "Root",
+      "status": "wishlist",
+      "added": "Oct 2026",
+      "sow_months": [
+        3,
+        4,
+        5
+      ],
+      "harvest_months": [
+        9,
+        10,
+        11,
+        12,
+        1
+      ],
+      "planting_window": "Sow outdoors Mar–early May once soil is about 12°C, 1cm deep; thin to 15cm apart [1]",
+      "harvest_window": "Lift when leaves die down in autumn, ideally after the first hard frost sweetens the roots; can stay in into winter [1]",
+      "special_instructions": [
+        "Use fresh seed each year; seedlings can take 14–30 days to appear [1]",
+        "Deep, stone-free soil with no fresh manure, or roots fork [1]",
+        "Mesh against carrot fly; grow canker-resistant varieties such as 'Albion' [1]"
+      ],
+      "recipes": [
+        "Turmeric and curry leaf roast parsnips [3]",
+        "Maple-roasted parsnips with red wine vinegar [3]",
+        "Roast parsnips with bacon, olives, sage and sprout leaves [3]"
+      ],
+      "sources": [
+        "https://www.rhs.org.uk/vegetables/parsnips/grow-your-own",
+        "https://www.rhs.org.uk/plants/243926/pastinaca-sativa-subsp-sativa/details",
+        "https://www.greatbritishchefs.com/features/best-christmas-parsnip-recipes"
+      ]
+    }
+  ]
+}
