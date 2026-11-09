@@ -5,6 +5,7 @@ __pycache__/
 *.reshuffle-tmp
 *.tmp
 .venv/
+.env
 .vscode/
 .idea/
 .DS_Store

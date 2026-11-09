@@ -136,8 +136,9 @@ def main():
     for s in steps:
         subprocess.run(s, check=True, env=env)
     pdf = glob.glob(os.path.join(V, "%03d-*.pdf" % a.id))
-    if pdf and shutil.which("pdftoppm"):
-        subprocess.run(["pdftoppm", "-r", "110", "-png", "-singlefile", pdf[0], os.path.join(build, "preview")], check=True)
+    if pdf and paths.rasteriser():
+        subprocess.run([paths.rasteriser(), "-r", "110", "-png", "-singlefile", pdf[0], os.path.join(build, "preview")],
+                       check=True, stderr=subprocess.DEVNULL)
         print("preview: build/preview.png")
 
 

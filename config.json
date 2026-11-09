@@ -3,5 +3,11 @@
   "vault_paths": [
     "C:\\Users\\norri\\OneDrive\\Documents\\my_vault\\Vegedex",
     "$HOME/mnt/my_vault/Vegedex"
-  ]
+  ],
+  "_mistral": "The web app researches vegetables with Mistral web search. MISTRAL_API_KEY comes from the environment, a .env at the repo root, or the .env file named here.",
+  "mistral_env_file": "C:\\Projects\\Mirstal\\.env",
+  "mistral_models": {
+    "search": "mistral-medium-latest",
+    "extract": "mistral-medium-latest"
+  }
 }

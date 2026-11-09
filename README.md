@@ -39,7 +39,7 @@ In the Claude computer shell the two folders are:
 Set up on a new machine:
 ```bash
 git clone https://github.com/JNorrie12/vegedex.git && cd vegedex
-pip install -r requirements.txt          # plus poppler for pdftoppm (gallery + previews)
+pip install -r requirements.txt          # plus poppler for pdftocairo (gallery + previews)
 # edit config.json -> vault_paths if the vault lives somewhere else
 ```
 
@@ -57,6 +57,27 @@ pip install -r requirements.txt          # plus poppler for pdftoppm (gallery + 
 | 6 | "X failed" / "X died" | growing → **failed**: red, "!" placeholder, red on the chart |
 
 Every status change goes through `transition.py`, which also rebuilds the card, family tree and gallery.
+
+### The web app
+
+Every flow below can also be done in a browser, with no Claude chat needed:
+
+```bash
+uv venv .venv && uv pip install -p .venv -r requirements.txt
+.venv\Scripts\python src/vegedex/server.py      # then open http://127.0.0.1:5173
+```
+
+| Tab | Does |
+|---|---|
+| Cards | The collection (rendered card previews) with status filters. Open a card to see its data and sources, open its PDF, change its status (through `transition.py`, harvest photo upload included), edit it, or re-research it |
+| Family tree | `Vegedex Family Tree.svg` from the vault |
+| Add vegetable | Name, variety, status, date and photo. **Research with Mistral** drafts the card (step B); check and edit the draft, then **Create card** saves it to `data/cards.json` and runs step D |
+| Tools | Rebuild the gallery and tree (flow 3), reshuffle with a dry run first (flow 4), open the collection PDF |
+
+- `src/vegedex/server.py` (Flask) only writes `data/cards.json` and `data/photos/`; all rendering goes through the existing scripts.
+- `src/vegedex/research.py` uses Mistral's built-in `web_search` tool (Agents/Conversations API) to find the RHS grow-your-own page, the RHS plant entry and recipes, then a JSON-mode call turns the notes into the step C fields with `[n]` citations. Unused sources are dropped and citations renumbered. Test it alone with `python src/vegedex/research.py "Leek"`.
+- `MISTRAL_API_KEY` comes from the environment, a `.env` at the repo root (gitignored), or the file named by `mistral_env_file` in `config.json`. Models are set in `config.json` → `mistral_models`.
+- The app doesn't commit or push, and doesn't republish the gallery artifact: do step E as before.
 
 ---
 
@@ -157,7 +178,7 @@ python3 src/vegedex/make_cards.py --only <id>            # card(s) + rebuilt col
 python3 src/vegedex/make_graph.py                        # vault/Family Tree
 python3 src/vegedex/make_gallery.py                      # vault/Vegedex.html
 python3 src/vegedex/make_gallery.py --fragment --out build/vegedex-fragment.html
-pdftoppm -r 110 -png -singlefile "$V/<NNN-slug>.pdf" build/preview
+pdftocairo -r 110 -png -singlefile "$V/<NNN-slug>.pdf" build/preview   # not pdftoppm: it renders jagged rounded edges
 ```
 Always use `--only` with just the cards you changed; the collection is stitched from the per-card PDFs already in the vault. Never render a grown card without its photo.
 

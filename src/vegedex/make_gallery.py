@@ -14,7 +14,7 @@ Usage:
     python make_gallery.py                       # uses ./cards.json and ./cards/*.pdf
     python make_gallery.py --cards cards --out cards/Vegedex.html
 
-Needs: pillow, and poppler's `pdftoppm` on PATH (renders the PDFs to images).
+Needs: pillow, and poppler's `pdftocairo` (or `pdftoppm`) on PATH (renders the PDFs to images).
 The card images and the tree are embedded in the HTML, so the page works offline;
 only the "Open PDF" links need the PDFs next to it.
 """
@@ -42,7 +42,8 @@ def slug(name):
 
 def pdf_to_data_uri(pdf):
     with tempfile.TemporaryDirectory() as d:
-        subprocess.run(["pdftoppm", "-png", "-r", "150", "-singlefile", pdf, os.path.join(d, "p")], check=True)
+        subprocess.run([paths.rasteriser(), "-png", "-r", "150", "-singlefile", pdf, os.path.join(d, "p")],
+                       check=True, stderr=subprocess.DEVNULL)
         im = Image.open(os.path.join(d, "p.png")).convert("RGB")
     im = im.resize((IMG_WIDTH, round(im.height * IMG_WIDTH / im.width)), Image.LANCZOS)
     buf = io.BytesIO()

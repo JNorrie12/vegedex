@@ -19,6 +19,16 @@ TAXONOMY = os.path.join(DATA, "taxonomy.json")
 BUILD = os.path.join(REPO, "build")   # scratch (gitignored): previews, artifact fragment
 
 
+def rasteriser():
+    """Poppler's PDF-to-PNG tool. pdftocairo first: pdftoppm's anti-aliasing leaves jagged,
+    offset right-hand edges on rounded shapes (pills, photo frame, calendar cells)."""
+    import shutil
+    for tool in ("pdftocairo", "pdftoppm"):
+        if shutil.which(tool):
+            return tool
+    return None
+
+
 def vault():
     cands = []
     if os.environ.get("VEGEDEX_VAULT"):

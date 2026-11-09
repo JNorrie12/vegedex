@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vegedex</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🥕</text></svg>">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">V</span><div><h1>Vegedex</h1><p id="vault" class="muted"></p></div></div>
+  <nav class="tabs" role="tablist">
+    <button data-tab="cards" class="active">Cards</button>
+    <button data-tab="timeline">Timeline</button>
+    <button data-tab="tree">Family tree</button>
+    <button data-tab="add">Add vegetable</button>
+    <button data-tab="tools">Tools</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Cards -->
+  <section id="tab-cards" class="tab active">
+    <div class="stats">
+      <div class="bar" id="bar"></div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="tab-timeline" class="tab">
+    <div class="panel">
+      <div class="row between">
+        <div><h2>Planting timeline</h2><p class="muted" id="tl-range" style="margin:0"></p></div>
+        <div class="legend"><span><i class="sw sow"></i>Sow / plant</span><span><i class="sw harvest"></i>Harvest</span><span><i class="sw now"></i>This month</span></div>
+      </div>
+      <div class="soon" id="tl-soon"></div>
+      <div class="row between" style="margin:18px 0 10px">
+        <div class="filters" id="tl-filters"></div>
+        <label class="inline-select">Sort by
+          <select id="tl-sort"><option value="next">Next sowing</option><option value="name">Name</option><option value="id">Card number</option></select>
+        </label>
+      </div>
+      <div class="tl-scroll"><div class="tl" id="tl-grid"></div></div>
+      <p class="muted" style="font-size:13px;margin:12px 0 0">Months come from each card's RHS sow and harvest months (UK timings). Click a vegetable to open its card.</p>
+    </div>
+  </section>
+
+  <!-- Family tree -->
+  <section id="tab-tree" class="tab">
+    <div class="panel">
+      <div class="row between"><h2>Family tree</h2><span class="muted">Grown in black, growing green-grey, failed red, wishlist grey.</span></div>
+      <div class="tree-wrap"><img id="tree-img" alt="Vegedex family tree"></div>
+    </div>
+  </section>
+
+  <!-- Add -->
+  <section id="tab-add" class="tab">
+    <div class="panel narrow">
+      <h2>Add a vegetable</h2>
+      <p class="muted">Mistral searches the web (RHS, then BBC Good Food) and drafts the card. Check it, then create the card.</p>
+      <form id="add-start" class="form">
+        <div class="cols">
+          <label>Vegetable<input name="name" required placeholder="e.g. Leek"></label>
+          <label><span>Variety <span class="muted">(only if known)</span></span><input name="variant" placeholder="Unknown"></label>
+        </div>
+        <div class="cols">
+          <label>Status
+            <select name="status">
+              <option value="wishlist">Wishlist: want to grow it</option>
+              <option value="growing">Growing: it's in the ground</option>
+              <option value="grown">Grown: harvested (needs a photo)</option>
+            </select>
+          </label>
+          <label><span><span id="date-label">Added</span> <span class="muted">(default this month)</span></span><input type="month" name="date"></label>
+        </div>
+        <label id="photo-field"><span>Photo <span class="muted" id="photo-hint">(optional reference image, greyed out on the card)</span></span><input type="file" name="photo" accept=".jpg,.jpeg,.png,.webp"></label>
+        <label id="credit-field"><span>Photo credit <span class="muted">(required if the image isn't yours)</span></span><input name="photo_credit" placeholder="Author, licence, source"></label>
+        <div class="row"><button class="primary" type="submit" id="research-btn">Research with Mistral</button><button type="button" class="ghost" id="skip-research">Skip research, fill in by hand</button></div>
+      </form>
+      <div id="research-status"></div>
+      <div id="add-editor"></div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section id="tab-tools" class="tab">
+    <div class="panel narrow">
+      <h2>Tools</h2>
+      <div class="tool">
+        <div><h3>Rebuild gallery and family tree</h3><p class="muted">Re-runs make_graph.py and both make_gallery.py pages (README flow 3).</p></div>
+        <button id="rebuild">Rebuild</button>
+      </div>
+      <div class="tool">
+        <div><h3>Reshuffle</h3><p class="muted">Renumber every card by botanical family so relatives sit together. Shows a dry run first.</p></div>
+        <button id="reshuffle-dry">Preview reshuffle</button>
+      </div>
+      <div class="tool">
+        <div><h3>Collection PDF</h3><p class="muted">Every card in one PDF.</p></div>
+        <a class="button" href="/api/collection.pdf" target="_blank">Open</a>
+      </div>
+      <div id="tool-out"></div>
+    </div>
+  </section>
+</main>
+
+<!-- Card detail -->
+<dialog id="detail">
+  <div class="detail">
+    <div class="detail-img"><img id="detail-img" alt=""></div>
+    <div class="detail-body" id="detail-body"></div>
+  </div>
+  <button class="close" id="detail-close" aria-label="Close">×</button>
+</dialog>
+
+<div id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
